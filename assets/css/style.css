@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* by default the font size is 16px, it becomes a lot easier to use REM is you normalise it 10px so you can caluclate rem values a lot easier */
+html {
+    font-size: 10px;
+}
+
+
+body {
+    margin: 0;
+    line-height: 2;
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+ 
+.main {
+    flex: 2;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo-img {
+    width: 6.4rem;
+    height: 6.4rem;
+    object-fit:contain;
+
+}
+
+
