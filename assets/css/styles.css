@@ -80,3 +80,36 @@ body {
 .main {
   flex: 2;
 }
+
+/* start of footer styles */
+
+.footer {
+  background-color: var(--carnelian);
+  font-size: 1.4rem;
+  padding: 2rem 0;
+  text-align: center;
+  color: var(--ash-grey);
+  letter-spacing: 0.4rem;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: var(--ash-grey);
+  margin: 0.5rem 0;
+}
+
+.contact-link:hover {
+  border-bottom: 0.2rem solid var(--ash-grey);
+  box-shadow: 0 0 1rem 0.5rem var(--alizarin-crimson);
+  background-color: var(--alizarin-crimson);
+}
+
+/* end of footer styles */
