@@ -211,6 +211,43 @@ body {
 
 /* end of question styles */
 
+/* start of form section styles */
+
+.feedback-form-section {
+  background-color: var(--cyan-blue-azure);
+  margin: 2rem 0;
+}
+
+.title {
+  text-align: center;
+  color: var(--ash-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+}
+
+/* feedback form styles */
+
+.form-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.form-input {
+  padding: 1rem 2rem;
+  width: 100%;
+  border: none;
+  border-radius: 0.4rem;
+}
+
+.form-input::placeholder {
+  font-size: 1.6rem;
+  letter-spacing: 0.4rem;
+}
+
+/* end of form section styles */
+
 @media screen and (max-width: 768px) {
   .main {
     margin: 0 1rem;
