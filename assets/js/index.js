@@ -74,9 +74,10 @@ const handleOptionClick = (event) => {
     const answer = {
       question,
       value,
-    }
+    };
     // TO DO: store answer in local storage 
-    console.log(answer);
+    
+    storeAnswerInLS(answer);
     
     // remove question
     removeQuestion();
@@ -171,7 +172,7 @@ const removeBanner = () => {
 
 // function to remove completed question from the page
 const removeQuestion = () => {
-  console.log("remove banner");
+  console.log("remove question");
   document.getElementById("question-container").remove();
 
 };
@@ -179,16 +180,26 @@ const removeQuestion = () => {
   // Initialise local storage
   const initialiseLocalStorage = () => {
     //  get feedback results from LS
-    const feedbackResultsFromLS = JSON.parse(localStorage.getItem("feedbackResults"))
+    const feedbackResultsFromLS = JSON.parse(localStorage.getItem("feedbackResults"));
 
     if (!feedbackResultsFromLS) {
       // if it doesnt exist, set LS to have feedbackResults as an empty array
       localStorage.setItem("feedbackResults", JSON.stringify([]));
-    };
+    }
     // if it already exists, do nothing
 
+  };
 
 
+  // store answer in Local storage
+  const storeAnswerInLS = (answer) => {
+    // get feedback results from LS
+    const feedbackResults = JSON.parse(localStorage.getItem("feedbackResults"));
+    // push answer to array
+    feedbackResults.push(answer);
+    
+    // set feedbackResults in localStorage
+    localStorage.setItem("feedbackResults", JSON.stringify(feedbackResults));
   };
 
 
@@ -197,7 +208,8 @@ const handleStartButtonClick = () => {
   console.log("start button clicked");
   
 
-
+ // initialise local storage
+ initialiseLocalStorage();
 
 
 
