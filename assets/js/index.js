@@ -176,9 +176,32 @@ const removeQuestion = () => {
 
 };
 
+  // Initialise local storage
+  const initialiseLocalStorage = () => {
+    //  get feedback results from LS
+    const feedbackResultsFromLS = JSON.parse(localStorage.getItem("feedbackResults"))
+
+    if (!feedbackResultsFromLS) {
+      // if it doesnt exist, set LS to have feedbackResults as an empty array
+      localStorage.setItem("feedbackResults", JSON.stringify([]));
+    };
+    // if it already exists, do nothing
+
+
+
+  };
+
+
 // declare the event handler function for start button click
 const handleStartButtonClick = () => {
   console.log("start button clicked");
+  
+
+
+
+
+
+
 
   // remove banner section
   removeBanner();
